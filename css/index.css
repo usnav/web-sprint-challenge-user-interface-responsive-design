@@ -22,6 +22,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+    
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -49,6 +50,8 @@ table {
 
 * {
     box-sizing: border-box;
+    max-width: 100%;
+   
 }
 
 html {
@@ -65,10 +68,13 @@ body {
 
 h1, h2, h3, h4, h5, h6, p, a, i {
     text-decoration: none;
+    color:white;
 }
 
 h1 {
-    font-size: 7.5rem;
+    font-size: 16rem;
+    text-align:center;
+    
 }
 
 h2 {
@@ -79,19 +85,57 @@ h3 {
     font-size: 5rem;
 }
 
-p, a {
+p {
     font-size: 3rem;
+}
+
+a {
+    font-size: 3.5rem;
 }
 
 /* header section */
 header {
+    color: white;
     width: 100%;
     height: 100vh;
     background-image: url('../img/home-header.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
+    
 }
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+a.title{
+    font-size: 7rem;
+    text-align: center;
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-inline: 40%;
+}
+
+.transparent {
+    width:100%;
+    height: 40%;
+    background-color: #000;
+    color: rgb(255, 255, 255);
+    opacity: .8;
+}
+
+img {
+    padding:1%;
+}
+
 
 /* spacers */
 .spacer {
@@ -108,7 +152,7 @@ header {
 /* gallery section */
 .gallery {
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     text-align: center;
     background-color: rgb(0, 4, 17);
 }
@@ -142,7 +186,7 @@ header {
 }
 
 /* contact us section */
-.contact {
+.contact-section {
     text-align: center;
     background-image: url("../img/jumbo-restaurant.jpg");
     background-size: cover;
@@ -169,14 +213,20 @@ header {
     padding: .5vh 0;
 }
 
+.heading2{
+    display: flex;
+    justify-content: center;
+}
+
 .info {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .address {
-    width: 25%;
+    width: 40%;
 }
 
 .hours {
@@ -193,9 +243,24 @@ footer {
     width: 100%;
     height: 15vh;
     padding-top: 2.5vh;
-    font-size: 3rem;
+    font-size: 5rem;
+    background-color: black;
+    color: white;
 }
 
+.logo{
+    font-size: 1.5rem;
+}
+
+
+input{
+    width:70%;
+    font-size: 3rem;
+}
+button{
+    width:25%;
+    font-size:3rem
+}
 /* mobile media query */
 @media (max-width: 428px) {
     /* header section */
@@ -205,22 +270,64 @@ footer {
     .gallery {
         height: auto;
     }
+    .menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     
     /* about us section */
 
     .about {
-        height: 200vh;
+        height: 210vh;
     }
-    
-    .about h2 {
+
+    .formm{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button{
         width: 100%;
-        padding-top: 5vh;
     }
-    
+
+    input{
+        width: 100%;
+    }
+
+    .about h2 {
+        width: 50%;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+    }
+
+    h1{
+
+        font-size: 16rem;
+        text-align: center;
+        display: flex;
+    }
+
+    .transparent{
+        height: 70vh;
+    }
+
+    a.title{
+        font-size: 5rem;
+        width: 100%;
+        margin: 5%;
+    }
     .about-container .text {
         width: 85%;
     }
+    .icons{
+        margin-inline: 5%;
+    }
     
+    .about-container{
+        height: 70vh;
+    }
     /* contact us section */
     .contact h3 {
         padding-top: 2.5vh;
@@ -249,5 +356,131 @@ footer {
         height: auto;
         padding-top: 2.5vh;
         font-size: 2rem;
+        background-color: black;
     }
+}
+
+.nav{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+.wholefooter{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.footersection{
+    background-color:black;
+}
+
+.logo{
+    font-size:1.5rem;  
+}
+
+.footernav{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+
+@media (max-width: 1920px) {
+    /* header section */
+    
+
+    /* gallery section */
+    .gallery {
+        height: auto;
+        
+    }
+    .logo{
+        margin: 5%;
+        font-size: 100%;
+        display: flex;
+        align-items: baseline;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    img{
+        padding: 2%;
+    }
+    /* about us section */
+
+    .about {
+        height: 75vh;
+    }
+    
+    .about h2 {
+        width: 100%;
+        
+    }
+    
+    .about-container .text {
+        width: 85%;
+    }
+    
+    /* contact us section */
+    .contact h3 {
+        padding-top: 2.5vh;
+    }
+    
+    .info {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .address {
+        width: 100%;
+        padding-bottom: 2.5vh;
+    }
+    
+    .hours {
+        width: 100%;
+    }
+
+    
+    
+    .contacts {
+        width: 100%;
+        padding-bottom: 2.5vh;
+    }
+
+    .nav{
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+    }
+
+    /* footer section */
+    footer {
+        height: auto;
+        padding-top: 2.5vh;
+        font-size: 2rem;
+    }
+    .footersection{
+        font-size: 200%;
+    }
+    .footernav{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
 }
